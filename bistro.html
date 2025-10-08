@@ -1,81 +1,190 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PuraVida</title>
+  <title>Pura Vida</title>
+  <meta name="description" content="Pura Vida - bistroe junto al mar. Carta mediterránea, bistró, eventos y atardeceres. Reserva tu mesa. ">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Croissant+One&family=Manrope:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="header">
-    <div class="menu"></div>
-    <div class="button-leng"></div>
-    <div class="logo">
-      <div class="logo-title"></div>
-      <div class="logo-subtitle">
-        <div class="logo-subtitle-line1"></div>
-        <div class="logo-subtitle-line2"></div>
-        <div class="logo-subtitle-line3"></div>
+  <!-- header -->
+  <header class="site-header" role="banner">
+    <nav class="nav-container">
+      <div class="nav-left-container">
+        <div class="hamburguer-menu"></div>
+        <ul class="nav-menu" aria-label="Navegación principal">
+          <li class="nav-item">
+            <a href="#home" class="nav-link">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a href="#bistroe" class="nav-link">bistroE</a>
+          </li>
+          <li class="nav-item">
+            <a href="#bistro" class="nav-link">BISTRÓ</a>
+          </li>
+          <li class="nav-item">
+            <a href="#eventos" class="nav-link">EVENTOS</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contacta" class="nav-link">CONTACTO/EMPLEO</a>
+          </li>
+          <li class="nav-item">
+            <a href="#ubicación" class="nav-link">UBICACIÓN</a>
+          </li>
+          <li class="nav-item">
+            <a href="#empleo" class="nav-link">QUIÉNES SOMOS</a>
+          </li>
+        </ul>
       </div>
-    </div>
-    <div class="header-video"></div>
-  </div>
-  <div class="hero">
-    <div class="hero-title"></div>
-    <div class="hero-subtitle"></div>
-    <div class="hero-image"></div>
-    <div class="deco-title"></div>
-  </div>
-  <div class="restaurant-menu">
-    <div class="restaurant-menu-title"></div>
-    <div class="restaurant-menu-subtitle"></div>
-    <div class="restaurant-menu-items">
-      <div class="restaurant-menu-cart"></div>
-      <div class="restaurant-menu-child"></div>
-      <div class="restaurant-menu-sushi"></div>
-    </div>
-    <div class="restaurant-bistro-link"></div>
-    <div class="restaurant-deco"></div>
-  </div>
-  <div class="galery">
-    <div class="galery-title"></div>
-    <div class="galery-subtitle"></div>
-    <div class="galery-images">
-      <div class="galery-image-1"></div>
-      <div class="galery-image-2"></div>
-      <div class="galery-image-3"></div>
-      <div class="galery-image-4"></div>
-      <div class="galery-image-5"></div>
-      <div class="galery-image-6"></div>
-      <div class="galery-image-7"></div>
-    </div>
-  </div>
-  <div class="boletin">
-    <div class="boletin-title"></div>
-    <div class="boletin-subtitle"></div>
-    <div class="boletin-input">
-      <input type="text" placeholder="Nombre completo">
-      <input type="text" placeholder="Correo electrónico">
-      <button>Quiero apuntarme</button>
-    </div>
-    <div class="rectangle-deco"></div>
-  </div>
-  <div class="footer">
-    <div class="footer-logo"></div>
-    <div class="footer-social-media"></div>
-    <div class="footer-left">
-      <div class="enlace-quienes-somos"></div>
-      <div class="enlace-menu"></div>
-      <div class="enlace-eventos"></div>
-      <div class="enlace-trabaja-con-nosotros"></div>
-    </div>
-    <div class="footer-right">
-      <div class="agenda"></div>
-      <div class="contactanos"></div>
-      <div class="ubicacion"></div>    
-    </div>
-    <div class="footer-location"></div>
-    <div class="footer-designer"></div>
-    <div class="footer-conditions"></div>
+      <div class="nav-center-container">
+        <div class="logo"><a href="home">PURA VIDA</a></div>
+        <div class="logo-subtitle"><h2>BISTRÓ</h2></div>
+        <div class="logo-info">
+          <div class="logo-info-time"><h3>17:30 - 22:00</h3></div>
+          <div class="logo-info-days"><h4>Miércoles-Sábado</h4></div>
+        </div>
+        <div class="header-video">
+          <div class="video"></div>
+          <div class="header-video-overlay"></div>
+        </div>
+      </div>
+      <div class="nav-right-container">
+        <!-- LENG -->
+        <div class="nav-lenguage">
+          <ul class="nav-lenguage-menu" aria-label="Seleccionar idioma">
+            <li class="nav-lenguage-item">
+              <a href="#es" class="nav-lenguage-link">ES</a>
+            </li>
+            <li class="nav-lenguage-item">
+              <a href="#cat" class="nav-lenguage-link">CAT</a>
+            </li>
+            <li class="nav-lenguage-item">
+              <a href="#en" class="nav-lenguage-link">EN</a>
+            </li>
+            <li class="nav-lenguage-item">
+              <a href="#de" class="nav-lenguage-link">DE</a>
+            </li>
+          </ul>
+        </div>
+        <!-- RRSS -->
+        <div class="social-media">
+          <ul class="social-media-menu" aria-label="Redes sociales">
+            <li class="social-media-item">
+              <a href="#facebook" class="social-media-link">FB</a>
+            </li>
+            <li class="social-media-item">
+              <a href="#instagram" class="social-media-link">IG</a>
+            </li>
+            <li class="social-media-item">
+              <a href="#twitter" class="social-media-link">TW</a>
+            </li>
+          </ul>
+        </div> 
+      </div>
+    </nav>
+  </header>
+  <main class="bistro-content">
+    <section class="hero-container">
+      <div class="hero-container-left">
+        <div class="hero-title"><h3>Un guiño mediterráneo</h3></div>
+        <div class="hero-text">
+          <p>Justo encima del bistroe, un rincón casual que te hará bailar, reir y disfrutar al sol o bajo el atardecer. Cocina sabrosa y sin complicaciones, raciones para compartir (o no), bebidas frescas, cocktails... Pasa, siéntate y deja que el mar haga lo suyo.</p>
+        </div>
+        <div class="hero-container-right">
+          <div class="hero-img"></div>
+        </div>
+      </div>
+    </section>
+    <section class="bistro-container">
+      <div class="bistro-container-split">
+        <div class="bistro-container-split-left">
+          <div class="bistro-img"></div>
+        </div>
+        <div class="bistro-container-split-right">
+          <div class="bistro-menu">
+            <div class="bistro-menu-title"></div>
+            <div class="bistro-menu-items">
+              <div class="bistro-menu-breakfast"></div>
+              <div class="bistro-menu-cart"></div>
+              <div class="bistro-menu-child"></div>
+              <div class="bistro-menu-sushi"></div>
+            </div>
+            <div class="bistro-menu-subtitle">
+              <p>O mira nuestro menú del <a>restaurante...</a></p>>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bistro-deco"></div>
+    </section>     
+    <!-- Galería -->
+    <section class="gallery-container">
+      <div class="gallery-container-split">
+        <div class="gallery-container-text">
+          <h2>El sol baja, la brisa sube, el recuerdo se queda.</h2>
+          <p class="subtitle">Cuando el Mediterráneo se enciende de oro y coral, el tiempo se detiene.
+            <br> En Pura Vida te invitamos a vivir puestas de sol conmovedoras: brisa suave, copa en mano y la certeza de un recuerdo que se queda. Déjate llevar y mira cómo cada tarde pinta el mar de magia.
+          </p>
+        </div>
+        <div class="gallery-container-image">
+          <img class="tall" src="" alt="Atardecer en Pura Vida">
+          <img src="" alt="Sombrillas al atardecer">
+          <img class="tall" src="" alt="Atardecer en Pura Vida">
+          <img src="" alt="Sombrillas al atardecer">
+          <img class="tall" src="" alt="Atardecer en Pura Vida">
+          <img src="" alt="Sombrillas al atardecer">
+          <img class="tall" src="" alt="Atardecer en Pura Vida">
+          <img src="" alt="Sombrillas al atardecer">
+          <img class="tall" src="" alt="Atardecer en Pura Vida">
+          <img src="" alt="Sombrillas al atardecer">
+        </div>
+      </div>
+    </section>
+    <!-- boletín -->
+    <section class="bulletin-container">
+      <div class="bulletin-container-split">
+        <div class="bulletin-container-img">
+          <img src="" alt="Foto boletín">
+        </div>
+        <div class="bulletin-container-text">
+            <div class="bulletin-title"><h1>Postales desde Pura Vida</h1></div>
+            <div class="bulletin-text">
+              <p>Si te gusta el mar al caer la tarde, este boletín es para ti. Novedades del bistroe y el bistró, menús nuevos y eventos que merecen un 'nos vemos en Pura Vida'.</p>
+            </div>
+            <div class="bulletin-input">
+              <input type="text" placeholder="Nombre completo">
+              <input type="text" placeholder="Correo electrónico">
+              <button>Quiero apuntarme</button>
+            </div>
+        </div>
+      </div>
+      <div class="rectangle-deco"></div>
+    </section>
+    <!-- Footer -->
+    <section class="footer">
+      <div class="footer-container">
+        <div class="footer-container-left">
+          <div class="enlace-quienes-somos"></div>
+          <div class="enlace-menu"></div>
+          <div class="enlace-eventos"></div>
+          <div class="enlace-trabaja-con-nosotros"></div>
+        </div>
+        <div class="footer-container-center">
+          <div class="footer-logo"></div>
+        </div>
+        <div class="footer-container-right">
+          <div class="agenda"></div>
+          <div class="contáctanos"></div>
+          <div class="ubicación"></div>
+        </div>
+        <div class="footer-social-media"></div>
+        <div class="footer-designer"></div>
+        <div class="footer-conditions"></div>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
