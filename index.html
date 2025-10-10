@@ -3,67 +3,58 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pura Vida</title>
   <meta name="description" content="Pura Vida - Restaurante junto al mar. Carta mediterránea, bistró, eventos y atardeceres. Reserva tu mesa. ">
+  <title>Pura Vida | Tú rincón favorito de mar</title>
+
+  <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Croissant+One&family=Manrope:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <!-- header -->
   <header class="site-header" role="banner">
     <nav class="nav-container">
+      <!-- navegación -->
       <div class="nav-left-container">
-        <div class="hamburguer-menu"></div>
-        <ul class="nav-menu" aria-label="Navegación principal">
-          <li class="nav-item">
-            <a href="#home" class="nav-link">HOME</a>
-          </li>
-          <li class="nav-item">
-            <a href="#restaurante" class="nav-link">RESTAURANTE</a>
-          </li>
-          <li class="nav-item">
-            <a href="#bistro" class="nav-link">BISTRÓ</a>
-          </li>
-          <li class="nav-item">
-            <a href="#eventos" class="nav-link">EVENTOS</a>
-          </li>
-          <li class="nav-item">
-            <a href="#contacta" class="nav-link">CONTACTO/EMPLEO</a>
-          </li>
-          <li class="nav-item">
-            <a href="#ubicación" class="nav-link">UBICACIÓN</a>
-          </li>
-          <li class="nav-item">
-            <a href="#empleo" class="nav-link">QUIÉNES SOMOS</a>
+        <button class="hamburguer-menu" aria-label="Menú">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="hamburguer-menu-off">
+          <ul class="nav-menu" aria-label="Navegación principal">
+          <li class="nav-item"><a href="#home" class="nav-link">HOME</a></li>
+          <li class="nav-item"><a href="#restaurante" class="nav-link">RESTAURANTE</a></li>
+          <li class="nav-item"><a href="#bistro" class="nav-link">BISTRÓ</a></li>
+          <li class="nav-item"><a href="#eventos" class="nav-link">EVENTOS</a></li>
+          <li class="nav-item"><a href="#contacta" class="nav-link">CONTACTO/EMPLEO</a></li>
+          <li class="nav-item"><a href="#ubicación" class="nav-link">UBICACIÓN</a></li>
+          <li class="nav-item"><a href="#empleo" class="nav-link">QUIÉNES SOMOS</a>
           </li>
         </ul>
+        </div>
       </div>
       <div class="nav-center-container">
-        <div class="logo"><a href="home">PURA VIDA</a></div>
+        <div class="logo"><a href="#home">PURA VIDA</a></div>
         <div class="button-reservation">
-          <a class="btn" href="reservas.html">RESERVA</a>
-        </div>
-        <div class="header-video">
-          <div class="video"></div>
-          <div class="header-video-overlay"></div>
+          <a class="reserve-btn" href="#reservas">RESERVAR</a>
         </div>
       </div>
+      <!-- LENG -->
       <div class="nav-right-container">
-        <!-- LENG -->
-        <div class="nav-lenguage">
+        <div class="language-selector">
           <ul class="nav-lenguage-menu" aria-label="Seleccionar idioma">
             <li class="nav-lenguage-item">
-              <a href="#es" class="nav-lenguage-link">ES</a>
+              <a href="#es" class="lang-link active">ES</a>
             </li>
             <li class="nav-lenguage-item">
-              <a href="#cat" class="nav-lenguage-link">CAT</a>
+              <a href="#cat" class="lang-link">CAT</a>
             </li>
             <li class="nav-lenguage-item">
-              <a href="#en" class="nav-lenguage-link">EN</a>
+              <a href="#en" class="lang-link">EN</a>
             </li>
             <li class="nav-lenguage-item">
-              <a href="#de" class="nav-lenguage-link">DE</a>
+              <a href="#de" class="lang-link">DE</a>
             </li>
           </ul>
         </div>
@@ -71,32 +62,41 @@
         <div class="social-media">
           <ul class="social-media-menu" aria-label="Redes sociales">
             <li class="social-media-item">
-              <a href="#facebook" class="social-media-link">FB</a>
+              <a href="#facebook" class="socialmedia-link active">FB</a>
             </li>
             <li class="social-media-item">
-              <a href="#instagram" class="social-media-link">IG</a>
+              <a href="#instagram" class="socialmedia-link">IG</a>
             </li>
             <li class="social-media-item">
-              <a href="#twitter" class="social-media-link">TW</a>
+              <a href="#twitter" class="socialmedia-link">TW</a>
             </li>
           </ul>
         </div> 
       </div>
     </nav>
+    <div class="header-video">
+      <video autoplay muted loop>
+        <source src="videos/header-video.mp4" type="video/mp4">
+      </video>
+      <div class="header-video-overlay"></div>
+    </div>
   </header>
   <!-- hero -->
-  <main class="home-content">
+  <main class="main-content">
     <section class="hero-container">
       <div class="hero-content">
         <div class="hero-title">
-          <h1>En Pura Vida estamos deseando compartir este momento contigo ofreciéndote una de las vistas más espectaculares en la costa Mallorquina</h1>
+          <h3>En Pura Vida estamos deseando compartir este momento contigo ofreciéndote una de las vistas más espectaculares en la costa Mallorquina</h3>
         </div>
         <div class="hero-logo"></div>
         <div class="hero-text">
           <p>Abrimos todos los días de 9:30 a 22:00hs. Ven y disfruta de nuestro servicio con la suave brisa del mar acompañándote desde el primer momento. Revisa nuestra carta y reserva ya tu momento especial con nosotros.</p>
         </div>
+        <a href="carta" class="cta-button">NUESTRA CARTA</a>
       </div>
-      <div class="hero-image"></div>
+      <div class="hero-image">
+        <img src="" alt="">
+      </div>
     </section>
     <!-- botones bistro-menu-restaurante -->
     <section class="featured-buttons">
@@ -175,11 +175,17 @@
             <div class="bulletin-text">
               <p>Si te gusta el mar al caer la tarde, este boletín es para ti. Novedades del restaurante y el bistró, menús nuevos y eventos que merecen un 'nos vemos en Pura Vida'.</p>
             </div>
-            <div class="bulletin-input">
-              <input type="text" placeholder="Nombre completo">
-              <input type="text" placeholder="Correo electrónico">
-              <button>Quiero apuntarme</button>
+            <form class="bulletin-form">
+              <input type="name" placeholder="Nombre completo" required>
+              <input type="email" placeholder="Correo electrónico" required>
+              <button type="submit">Quiero apuntarme</button>
+            <div class="privacy-notice">
+              <label>
+                <input type="checkbox" required>
+                Acepto las condiciones legales y la polític
+              </label>
             </div>
+            </form>
         </div>
       </div>
       <div class="rectangle-deco"></div>
@@ -188,22 +194,30 @@
     <section class="footer">
       <div class="footer-container">
         <div class="footer-container-left">
-          <div class="enlace-quienes-somos"></div>
-          <div class="enlace-menu"></div>
-          <div class="enlace-eventos"></div>
-          <div class="enlace-trabaja-con-nosotros"></div>
+          <div class="enlace-quienes-somos">QUIÉNES SOMOS</div>
+          <div class="enlace-menu">MENÚ</div>
+          <div class="enlace-eventos">EVENTOS</div>
+          <div class="enlace-trabaja-con-nosotros">EMPLEO</div>
         </div>
         <div class="footer-container-center">
           <div class="footer-logo"></div>
         </div>
         <div class="footer-container-right">
-          <div class="agenda"></div>
-          <div class="contáctanos"></div>
-          <div class="ubicación"></div>
+          <div class="agenda">AGENDA</div>
+          <div class="contáctanos">CONTÁCTANOS</div>
+          <div class="ubicación">UBICACIÓN</div>
         </div>
-        <div class="footer-social-media"></div>
-        <div class="footer-designer"></div>
-        <div class="footer-conditions"></div>
+        <div class="footer-social-media">
+          <div class="footer-facebook">FB</div>
+          <div class="footer-instagram">IG</div>
+          <div class="footer-twitter">TW</div>
+        </div>
+        <div class="footer-designer">
+          Design made by @Graphic.ron on IG
+        </div>
+        <div class="footer-conditions">
+          Terms & Conditions | Privacy Policy 
+        </div>
       </div>
     </section>
   </main>
