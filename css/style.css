@@ -2,6 +2,10 @@
   --panel-w: min(350px, 80vw);
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
   font-family: 'Manrope', sans-serif;
   margin:0;
@@ -18,11 +22,8 @@ body{
 
 /* Header Video */
 .header-video {
+    inset:0;
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     z-index: -2;
 }
 
@@ -33,19 +34,17 @@ body{
 }
 
 .header-video-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     background: rgba(0, 0, 0, 0.3);
-    z-index: -1;
+    inset: 0;
+    position: absolute;
     transition: background 0.5s ease;
+    z-index: -1;
 }
 
 /* Navegación centro (pura vida y reservar) */
 .nav-center-container {
-    position: absolute;
+    align-items: center;
+    gap: 30px;
     top: 0;
     left: 0;
     width: 100%;
@@ -53,16 +52,17 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     text-align: center;
     z-index: 10;
     pointer-events: none;
+    position: absolute;
+
 }
 
 .nav-center-container .logo a {
     color: #fff;
     font-family: "Croissant One", cursive;
-    font-size: 5rem;
+    font-size: 8rem;
     margin-bottom: 20px;
     pointer-events: auto;
     text-decoration: none;
@@ -92,31 +92,66 @@ body{
 /* navegación fija (arriba)*/
 .nav-container{
   align-items: center;
+  background: transparent;
   box-sizing: border-box;
+  color: #fff;
   display: flex;
   justify-content: space-between;
   left: 0;
   padding: 20px 30px;
   position: fixed;
+  transition: background .25s ease, color .25s ease, box-shadow .25s ease, border-color .25s ease;
   top: 0;
   width: 100%;
-  z-index: 100;
+  z-index: 120;
 }
 
 /* NAV hamburguer menu */
 .hamburguer-menu{
   background: none;
   border: none;
+  color: inherit;
   cursor: pointer;
   padding: 10px;
   z-index: 101;
 }
 
 /* selector idioma y RRSS*/
+.nav-right-container{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
 
-.language-selector {
-    position: relative;
-    display: inline-block;
+.language-selector ul, .social-media ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.language-selector li{
+    margin-right: 5px;
+}
+
+.language-selector a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    opacity: .7;
+    transition: opacity .3s;
+    padding: 5px;
+}
+
+.language-selector a.active, .language-selector a:hover{
+    opacity: 1;
+}
+
+
+.language-selector .lang-trigger {
+    border-color: rgba(255,255,255,.4);
+    color: #fff;
+
 }
 
 .lang-trigger{
@@ -142,7 +177,7 @@ body{
     transition: transform .2s ease;
 }
 
-.lenguage-selector.is-open .lang-trigger .chevron{
+.language-selector.is-open .lang-trigger .chevron{
     transform: rotate(180deg);
 }
 
@@ -200,13 +235,14 @@ body{
     text-decoration: none;
     color: #fff;
     font-size: 1.2rem;
-    opacity: 0.7;
-    transition: opacity 0.3s;
+    opacity: .7;
+    transition: opacity .3s;
 }
 
 .social-media a:hover{
     opacity: 1;
 }
+
 
 /* panel menú deslizante */
 .menu-panel {
@@ -216,9 +252,10 @@ body{
     width: var(--panel-w);
     height: 100vh;
     background-color: #f8f8f8;
+    color: #1a1a1a;
     padding: 120px 40px 20px;
     box-sizing: border-box;
-    transition: left 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+    transition: left .5s cubic-bezier(0.77, 0, 0.175, 1);
     z-index: 99;
 }
 
@@ -233,7 +270,7 @@ body{
 }
 
 .menu-panel li {
-    margin-bottom: 15px;
+    margin-bottom: 25px;
 }
 
 .menu-panel a {
@@ -297,6 +334,43 @@ body{
 .menu-panel.is-open:focus-within + .menu-preview{
     transform: translateX(100%);            /* “desplegado” */
     opacity: 1;
+}
+
+.menu-flyout{
+  position: fixed;
+  top: 70px;                               /* ancla vertical del dropdown */
+  left: calc(var(--panel-w) + 10px);       /* pegado a la derecha del panel con 10px gap */
+  width: var(--panel-w);
+  min-height: 280px;                        /* altura mínima para presencia visual */
+  max-height: 80vh;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 14px 40px rgba(0,0,0,.35);
+  z-index: 98;                              /* debajo del panel, encima del shade */
+  pointer-events: none;                     /* no roba el mouse */
+  /* imagen de fondo dinámica */
+  background-size: cover;
+  background-position: center;
+
+  /* animación de entrada */
+  transform-origin: top left;
+  transform: translateY(-8px) scale(.96);
+  opacity: 0;
+  transition: transform .25s ease, opacity .2s ease;
+}
+
+/* capa oscura / efecto “glassy” */
+.menu-flyout::before{
+  content:""; position:absolute; inset:0;
+  background: rgba(29,29,29,.55);
+
+}
+
+/* Mostrar el flyout cuando el panel está abierto y el usuario interactúa con él */
+.menu-panel.is-open:hover + .menu-flyout,
+.menu-panel.is-open:focus-within + .menu-flyout{
+  transform: translateY(0) scale(1);
+  opacity: 1;
 }
 
 /* ajuste overlay video cuando menu está abierto */

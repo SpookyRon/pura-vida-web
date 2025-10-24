@@ -30,22 +30,20 @@
     <nav class="nav-container">
       <div class="nav-left-container">
         <button class="hamburguer-menu" aria-label="Menú" aria-controls="menu-panel" aria-expanded="false">
-          <svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 8h24M4 16h24M4 24h24" stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 8h24M4 16h24M4 24h24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
       </div>
       <!-- LENG -->
-      <div class="language-selector">
-        <button class="lang-trigger" aria-haspopup="listbox" aria-expanded="false" aria-controls="lang-dropdown">
-          <span class="current-lang">ES</span>
-          <span class="chevron" aria-hidden="true"></span>
-        </button>
-        <ul id="lang-dropdown" class="lang-list" role="listbox" aria-label="Seleccionar idioma" hidden>
-          <li class="lang-item"><a href="#es"  class="lang-option active" data-lang="ES">ES</a></li>
-          <li class="lang-item"><a href="#cat" class="lang-option" data-lang="CAT">CAT</a></li>
-          <li class="lang-item"><a href="#en"  class="lang-option" data-lang="EN">EN</a></li>
-          <li class="lang-item"><a href="#de"  class="lang-option" data-lang="DE">DE</a></li>
-        </ul>
-      </div>
+      <div class="nav-right-container">
+        <div class="language-selector">
+          <ul class="nav-lenguage-menu" aria-label="Seleccionar idioma">
+            <li class="nav-lenguage-item"><a href="#es" class="lang-link active">ES</a></li>
+            <li class="nav-lenguage-item"><a href="#cat" class="lang-link">CAT</a></li>
+            <li class="nav-lenguage-item"><a href="#en" class="lang-link">EN</a></li>
+            <li class="nav-lenguage-item"><a href="#de" class="lang-link">DE</a></li>
+          </ul>
+        </div>
+      
         <!-- RRSS -->
         <div class="social-media">
           <ul class="social-media-menu" aria-label="Redes sociales">
@@ -90,7 +88,7 @@
     <!-- botones bistro-menu-restaurante -->
      
     <!-- Vales regalo -->
-    <!-- <section class="gift-voucher-container">
+    <section class="gift-voucher-container">
       <div class="gift-voucher-container-split">
         <div class="gift-voucher-left">
           <div class="gift-voucher-title">
@@ -108,9 +106,9 @@
           <div class="gift-voucher-background"></div>
         </div>
       </div>
-    </section> -->
+    </section>
     <!-- Galería -->
-    <!-- <section class="gallery-container">
+    <section class="gallery-container">
       <div class="gallery-container-split">
         <div class="gallery-container-text">
           <h2>El sol baja, la brisa sube, el recuerdo se queda.</h2>
@@ -131,7 +129,7 @@
           <img src="" alt="Sombrillas al atardecer">
         </div>
       </div>
-    </section> -->
+    </section>
     <!-- boletín -->
     <!-- <section class="bulletin-container">
       <div class="bulletin-container-split">

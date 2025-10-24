@@ -12,6 +12,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const hasPreview = !!menuPreview;
   const DEFAULT_PREVIEW = 'images/preview.jpg';
+  const navBar = document.querySelector('.nav-container');
+
+  const setScrolled = () => {
+    const scrolled = window.scrollY > 10;
+    navBar.classList.toggle('is-scrolled', scrolled);
+  };
+
+  setScrolled();
+  window.addEventListener('scroll', setScrolled, { passive: true });
+  window.addEventListener('resize', setScrolled);
 
   const setMenuState = (open) => {
     menuPanel.classList.toggle('is-open', open);
