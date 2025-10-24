@@ -9,77 +9,66 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Croissant+One&family=Manrope:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script type="module" src="./js/main.js"></script>
 </head>
 <body>
   <!-- header -->
   <header class="site-header" role="banner">
-    <nav class="nav-container">
-      <!-- navegación -->
-      <div class="nav-left-container">
-        <button class="hamburguer-menu" aria-label="Menú">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        <div class="hamburguer-menu-off">
-          <ul class="nav-menu" aria-label="Navegación principal">
-          <li class="nav-item"><a href="#home" class="nav-link">HOME</a></li>
-          <li class="nav-item"><a href="#restaurante" class="nav-link">RESTAURANTE</a></li>
-          <li class="nav-item"><a href="#bistro" class="nav-link">BISTRÓ</a></li>
-          <li class="nav-item"><a href="#eventos" class="nav-link">EVENTOS</a></li>
-          <li class="nav-item"><a href="#contacta" class="nav-link">CONTACTO/EMPLEO</a></li>
-          <li class="nav-item"><a href="#ubicación" class="nav-link">UBICACIÓN</a></li>
-          <li class="nav-item"><a href="#empleo" class="nav-link">QUIÉNES SOMOS</a>
-          </li>
-        </ul>
-        </div>
-      </div>
-      <div class="nav-center-container">
-        <div class="logo"><a href="#home">PURA VIDA</a></div>
-        <div class="button-reservation">
-          <a class="reserve-btn" href="#reservas">RESERVAR</a>
-        </div>
-      </div>
-      <!-- LENG -->
-      <div class="nav-right-container">
-        <div class="language-selector">
-          <ul class="nav-lenguage-menu" aria-label="Seleccionar idioma">
-            <li class="nav-lenguage-item">
-              <a href="#es" class="lang-link active">ES</a>
-            </li>
-            <li class="nav-lenguage-item">
-              <a href="#cat" class="lang-link">CAT</a>
-            </li>
-            <li class="nav-lenguage-item">
-              <a href="#en" class="lang-link">EN</a>
-            </li>
-            <li class="nav-lenguage-item">
-              <a href="#de" class="lang-link">DE</a>
-            </li>
-          </ul>
-        </div>
-        <!-- RRSS -->
-        <div class="social-media">
-          <ul class="social-media-menu" aria-label="Redes sociales">
-            <li class="social-media-item">
-              <a href="#facebook" class="socialmedia-link active">FB</a>
-            </li>
-            <li class="social-media-item">
-              <a href="#instagram" class="socialmedia-link">IG</a>
-            </li>
-            <li class="social-media-item">
-              <a href="#twitter" class="socialmedia-link">TW</a>
-            </li>
-          </ul>
-        </div> 
-      </div>
-    </nav>
     <div class="header-video">
       <video autoplay muted loop>
         <source src="videos/header-video.mp4" type="video/mp4">
       </video>
       <div class="header-video-overlay"></div>
     </div>
+    <div class="nav-center-container">
+        <div class="logo"><a href="#home">PURA VIDA</a></div>
+        <div class="button-reservation">
+          <a class="reserve-btn" href="#reservas">RESERVAR</a>
+        </div>
+    </div>
+    <!-- navegación -->
+    <nav class="nav-container">
+      <div class="nav-left-container">
+        <button class="hamburguer-menu" aria-label="Menú" aria-controls="menu-panel" aria-expanded="false">
+          <svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 8h24M4 16h24M4 24h24" stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+      <!-- LENG -->
+      <div class="language-selector">
+        <button class="lang-trigger" aria-haspopup="listbox" aria-expanded="false" aria-controls="lang-dropdown">
+          <span class="current-lang">ES</span>
+          <span class="chevron" aria-hidden="true"></span>
+        </button>
+        <ul id="lang-dropdown" class="lang-list" role="listbox" aria-label="Seleccionar idioma" hidden>
+          <li class="lang-item"><a href="#es"  class="lang-option active" data-lang="ES">ES</a></li>
+          <li class="lang-item"><a href="#cat" class="lang-option" data-lang="CAT">CAT</a></li>
+          <li class="lang-item"><a href="#en"  class="lang-option" data-lang="EN">EN</a></li>
+          <li class="lang-item"><a href="#de"  class="lang-option" data-lang="DE">DE</a></li>
+        </ul>
+      </div>
+        <!-- RRSS -->
+        <div class="social-media">
+          <ul class="social-media-menu" aria-label="Redes sociales">
+            <li class="social-media-item"><a href="#instagram" class="socialmedia-link">IG</a></li>
+            <li class="social-media-item"><a href="#whatsapp" class="socialmedia-link">WP</a></li>
+          </ul>
+        </div> 
+      </div>
+    </nav>
+      <!-- menú desplegable -->
+    <div class="menu-panel" aria-hidden="true">
+      <ul class="nav-menu" aria-label="Navegación principal">
+        <li class="nav-item"><a href="#home" class="nav-link" data-preview="images/home.jpg">Home</a></li>
+        <li class="nav-item"><a href="#restaurant-section" class="nav-link" data-preview="images/home.jpg">Restaurante</a></li>
+        <li class="nav-item"><a href="#bistro-section" class="nav-link" data-preview="images/home.jpg">Bistró</a></li>
+        <li class="nav-item"><a href="#events-section" class="nav-link" data-preview="images/home.jpg">Eventos</a></li>
+        <li class="nav-item"><a href="#contact-section" class="nav-link" data-preview="images/home.jpg">Contacto/Empleo</a></li>
+        <li class="nav-item"><a href="#ubication-section" class="nav-link" data-preview="images/home.jpg">Ubicación</a></li>
+        <li class="nav-item"><a href="#info-section" class="nav-link" data-preview="images/home.jpg">Quiénes somos</a></li>
+      </ul>
+    </div>
+    <div class="menu-preview" aria-hidden="true"></div>
+    <div class="shade"></div>
   </header>
   <!-- hero -->
   <main class="main-content">
@@ -99,30 +88,9 @@
       </div>
     </section>
     <!-- botones bistro-menu-restaurante -->
-    <section class="featured-buttons">
-      <div class="image-grid">
-        <div class="image-card">
-          <img src="" alt="Restaurante">
-          <div class="image-overlay">
-            <h3>Restaurante</h3>
-          </div>
-        </div>
-        <div class="image-card">
-          <img src="" alt="Menú">
-          <div class="image-overlay">
-            <h3>Menú</h3>
-          </div>
-        </div>
-        <div class="image-card">
-          <img src="" alt="Bistró">
-          <div class="image-overlay">
-            <h3>Bistró</h3>
-          </div>
-        </div>
-      </div>
-    </section>
+     
     <!-- Vales regalo -->
-    <section class="gift-voucher-container">
+    <!-- <section class="gift-voucher-container">
       <div class="gift-voucher-container-split">
         <div class="gift-voucher-left">
           <div class="gift-voucher-title">
@@ -140,9 +108,9 @@
           <div class="gift-voucher-background"></div>
         </div>
       </div>
-    </section>
+    </section> -->
     <!-- Galería -->
-    <section class="gallery-container">
+    <!-- <section class="gallery-container">
       <div class="gallery-container-split">
         <div class="gallery-container-text">
           <h2>El sol baja, la brisa sube, el recuerdo se queda.</h2>
@@ -163,9 +131,9 @@
           <img src="" alt="Sombrillas al atardecer">
         </div>
       </div>
-    </section>
+    </section> -->
     <!-- boletín -->
-    <section class="bulletin-container">
+    <!-- <section class="bulletin-container">
       <div class="bulletin-container-split">
         <div class="bulletin-container-img">
           <img src="" alt="Foto boletín">
@@ -189,9 +157,9 @@
         </div>
       </div>
       <div class="rectangle-deco"></div>
-    </section>
+    </section> -->
     <!-- Footer -->
-    <section class="footer">
+    <!-- <section class="footer">
       <div class="footer-container">
         <div class="footer-container-left">
           <div class="enlace-quienes-somos">QUIÉNES SOMOS</div>
@@ -219,7 +187,7 @@
           Terms & Conditions | Privacy Policy 
         </div>
       </div>
-    </section>
+    </section> -->
   </main>
 </body>
 </html>
