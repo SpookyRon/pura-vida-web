@@ -1,14 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
   
   const hamburgerMenu = document.querySelector('.hamburguer-menu');
-  const menuPanel     = document.querySelector('.menu-panel');
-  const shade         = document.querySelector('.shade');
-  const siteHeader    = document.querySelector('.site-header');
-  const menuPreview   = document.querySelector('.menu-preview');
+  const menuPanel = document.querySelector('.menu-panel');
+  const shade = document.querySelector('.shade');
+  const siteHeader = document.querySelector('.site-header');
+  const menuPreview = document.querySelector('.menu-preview');
 
-  const langSel       = document.querySelector('.language-selector');
-  const langTrigger   = langSel?.querySelector('.lang-trigger');
-  const langList      = langSel?.querySelector('.lang-list');
+  const langSel = document.querySelector('.language-selector');
+  const langTrigger = langSel?.querySelector('.lang-trigger');
+  const langList = langSel?.querySelector('.lang-list');
 
   const hasPreview = !!menuPreview;
   const DEFAULT_PREVIEW = 'images/preview.jpg';
