@@ -89,27 +89,35 @@
     <!-- botones bistro-menu-restaurante -->
      
     <section class="quick-links">
-      <a class="ql-card" href="#restaurant-section"> Restaurante </a>
-      <a class="ql-card" href="#bistro-section"> Restaurante </a>
-      <a class="ql-card" href=".docs/carta-es.pdf"> Carta </a>
+      <a class="ql-card ql-restaurant" href="#restaurant-section"> 
+        <span class="ql-label">RESTAURANTE</span>
+      </a>
+      <a class="ql-card ql-bistro" href="#bistro-section"> 
+        <span class="ql-label">BISTRÓ</span> 
+      </a>
+      <a class="ql-card ql-menu" href=".docs/carta-es.pdf" target="_blank" rel="noopener"> 
+        <span class="ql-label">CARTA</span>> 
+      </a>
     </section>
 
     <!-- Vales regalo -->
     <section class="gift-voucher-container">
       <div class="gift-voucher-container-split">
         <div class="gift-voucher-left">
+          <div class="gift-voucher-deco" aria-hidden="true"></div>
           <div class="gift-voucher-title">
             <h2>Un vale, mil atardeceres</h2>
           </div>
           <div class="gift-voucher-text">
-            <p>En Pura Vida creemos que lo especial se comparte y, por ello, estamos deseando formar parte de ese momento mágico. 
-              <br> Si tú pones el motivo; nosotros, el Mediterraneo. <br> Acércate a nuestro restaurante para más información</p>
+            <p>En Pura Vida creemos que lo especial se comparte y, por ello, estamos deseando formar parte de ese momento mágico.<br><br> 
+              <br> <strong>Si tú pones el motivo; nosotros, el Mediterraneo.</strong> <br><br> Acércate a nuestro restaurante para más información.</p>
           </div>
           <div class="gift-voucher-link"><a href="#ubicacion.html">Ubicación</a></div>
         </div>
         <div class="gift-voucher-right">
-          <div class="gift-voucher-img"></div>
-          <div class="gift-voucher-deco"></div>
+          <div class="gift-voucher-img">
+              <img src="images/voucher.jpg">
+          </div>
           <div class="gift-voucher-background"></div>
         </div>
       </div>
@@ -124,75 +132,85 @@
           </p>
         </div>
         <div class="gallery-container-image">
-          <img class="tall" src="" alt="Atardecer en Pura Vida">
-          <img src="" alt="Sombrillas al atardecer">
-          <img class="tall" src="" alt="Atardecer en Pura Vida">
-          <img src="" alt="Sombrillas al atardecer">
-          <img class="tall" src="" alt="Atardecer en Pura Vida">
-          <img src="" alt="Sombrillas al atardecer">
-          <img class="tall" src="" alt="Atardecer en Pura Vida">
-          <img src="" alt="Sombrillas al atardecer">
-          <img class="tall" src="" alt="Atardecer en Pura Vida">
-          <img src="" alt="Sombrillas al atardecer">
+          <img class="tall" src="images/g1.jpg" alt="Atardecer en Pura Vida">
+          <img src="images/g2.jpg" alt="Sombrillas al atardecer">
+          <img class="tall" src="images/g3.jpg" alt="Atardecer en Pura Vida">
+          <img src="images/g4.jpg" alt="Sombrillas al atardecer">
+          <img class="tall" src="images/g5.jpg" alt="Atardecer en Pura Vida">
+          <img src="images/g6.jpg" alt="Sombrillas al atardecer">
+          <img class="tall" src="images/g7.jpg" alt="Atardecer en Pura Vida">
+          <img src="images/g8.jpg" alt="Sombrillas al atardecer">
+          <img class="tall" src="images/g9.jpg" alt="Atardecer en Pura Vida">
+          <img src="images/g10.jpg" alt="Sombrillas al atardecer">
+          <img class="tall" src="images/g11.jpg" alt="Atardecer en Pura Vida">
+          <img src="images/g12.jpg" alt="Sombrillas al atardecer">
+          <img src="images/g13.jpg" alt="Atardecer en Pura Vida">
+          <img src="images/g14.jpg" alt="Sombrillas al atardecer">
         </div>
       </div>
     </section>
     <!-- boletín -->
-    <!-- <section class="bulletin-container">
+    <section class="bulletin-container">
       <div class="bulletin-container-split">
         <div class="bulletin-container-img">
-          <img src="" alt="Foto boletín">
+          <div class="bulletin-container-deco" aria-hidden="true"></div>
+          <img src="/images/bulletin-photo.jpg" alt="Foto boletín">
         </div>
         <div class="bulletin-container-text">
-            <div class="bulletin-title"><h1>Postales desde Pura Vida</h1></div>
+            <div class="bulletin-title"><h2>Postales desde Pura Vida</h2></div>
             <div class="bulletin-text">
               <p>Si te gusta el mar al caer la tarde, este boletín es para ti. Novedades del restaurante y el bistró, menús nuevos y eventos que merecen un 'nos vemos en Pura Vida'.</p>
             </div>
-            <form class="bulletin-form">
+            <form class="bulletin-form" action="#" method="post" novalidate>
               <input type="name" placeholder="Nombre completo" required>
               <input type="email" placeholder="Correo electrónico" required>
               <button type="submit">Quiero apuntarme</button>
             <div class="privacy-notice">
               <label>
                 <input type="checkbox" required>
-                Acepto las condiciones legales y la polític
+                Acepto las condiciones legales y la política de privacidad
               </label>
             </div>
             </form>
         </div>
       </div>
-      <div class="rectangle-deco"></div>
-    </section> -->
+    </section>
     <!-- Footer -->
-    <!-- <section class="footer">
+    <section class="footer">
       <div class="footer-container">
         <div class="footer-container-left">
-          <div class="enlace-quienes-somos">QUIÉNES SOMOS</div>
-          <div class="enlace-menu">MENÚ</div>
-          <div class="enlace-eventos">EVENTOS</div>
-          <div class="enlace-trabaja-con-nosotros">EMPLEO</div>
+          <a class="enlace-quienes-somos" href="#info-section">QUIÉNES SOMOS</a>
+          <a class="enlace-menu" href="docs/carta-es.pdf" target="_blank" rel="noopener">MENÚ</a>
+          <a class="enlace-eventos" href="#events-section">EVENTOS</a>
+          <a class="enlace-trabaja-con-nosotros" href="#contact-section">EMPLEO</a>
         </div>
         <div class="footer-container-center">
-          <div class="footer-logo"></div>
+          <div class="footer-logo">
+            <img src="images/logo-pv.svg" alt="Pura Vida">
+          </div>
         </div>
         <div class="footer-container-right">
-          <div class="agenda">AGENDA</div>
-          <div class="contáctanos">CONTÁCTANOS</div>
-          <div class="ubicación">UBICACIÓN</div>
+          <a class="agenda" href="#events-section">AGENDA</a>
+          <a class="contáctanos" href="#contact-section">CONTÁCTANOS</a>
+          <a class="ubicación" href="#ubication-section">UBICACIÓN</a>
         </div>
         <div class="footer-social-media">
-          <div class="footer-facebook">FB</div>
-          <div class="footer-instagram">IG</div>
-          <div class="footer-twitter">TW</div>
+          <a class="footer-ig" href="https://instagram.com/" target="_blank" rel="noopener">IG</a>
+          <a class="footer-wa" href="https://wa.me/34971123456" target="_blank" rel="noopener">TW</a>
         </div>
-        <div class="footer-designer">
-          Design made by @Graphic.ron on IG
-        </div>
-        <div class="footer-conditions">
-          Terms & Conditions | Privacy Policy 
+        <div class="footer-meta">
+          <div class="footer-designer">
+            Design made by @Graphic.ron on IG
+          </div>
+          <div class="footer-designer">
+            Photos made by @BarudioStudio on IG
+          </div>
+          <div class="footer-conditions">
+            <a href="#">Terms & Conditions</a> · <a href="#">Privacy Policy</a> 
+          </div>
         </div>
       </div>
-    </section> -->
+    </section>
   </main>
 </body>
 </html>
