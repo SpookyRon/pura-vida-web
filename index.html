@@ -83,7 +83,7 @@
         </a>
       </div>
       <div class="hero-image">
-        <img src="images/hero.jpg">
+        <img src="images/hero.jpg" alt="Vista al mar desde Pura Vida">
       </div>
     </section>
     <!-- botones bistro-menu-restaurante -->
@@ -116,7 +116,7 @@
         </div>
         <div class="gift-voucher-right">
           <div class="gift-voucher-img">
-              <img src="images/voucher.jpg">
+              <img src="images/voucher.jpg" alt="Personas disfrutando de Pura Vida">
           </div>
           <div class="gift-voucher-background"></div>
         </div>
@@ -154,63 +154,106 @@
       <div class="bulletin-container-split">
         <div class="bulletin-container-img">
           <div class="bulletin-container-deco" aria-hidden="true"></div>
-          <img src="/images/bulletin-photo.jpg" alt="Foto boletín">
+          <img src="/images/bulletin-photo.jpg" alt="Foto pura vida entrada boletín">
         </div>
         <div class="bulletin-container-text">
-            <div class="bulletin-title"><h2>Postales desde Pura Vida</h2></div>
-            <div class="bulletin-text">
-              <p>Si te gusta el mar al caer la tarde, este boletín es para ti. Novedades del restaurante y el bistró, menús nuevos y eventos que merecen un 'nos vemos en Pura Vida'.</p>
-            </div>
-            <form class="bulletin-form" action="#" method="post" novalidate>
-              <input type="name" placeholder="Nombre completo" required>
-              <input type="email" placeholder="Correo electrónico" required>
-              <button type="submit">Quiero apuntarme</button>
-            <div class="privacy-notice">
-              <label>
-                <input type="checkbox" required>
-                Acepto las condiciones legales y la política de privacidad
+          <div class="bulletin-title"><h2>Postales desde Pura Vida</h2></div>
+          <div class="bulletin-text">
+            <p>Si te gusta el mar al caer la tarde, este boletín es para ti. Novedades del restaurante y el bistró, menús nuevos y eventos que merecen un 'nos vemos en Pura Vida'.</p>
+          </div>
+          <form class="bulletin-form" action="#" method="post" novalidate>
+            <!-- nombre-->
+             <label class="sr-only" for="btl-name"> Nombre completo </label>
+            <input id="blt-name" name="name" type="text" autocomplete="name" placeholder="Nombre completo" required>
+            <!-- email-->
+            <label class="sr-only" for="btl-email"> Correo electrónico </label>
+            <input id="btl-email" name="email" type="email" autocomplete="email" placeholder="Correo electrónico" required>
+
+            <!-- aviso privacidad-->
+             <div class="privacy-notice">
+              <label for="btl-rgpd">
+                <input type="checkbox" id="btl-rgpd" name="consent" required>
+                <span>Acepto las condiciones legales y la <a href="./política-privacidad" target="_blank" rel="noopener">política de privacidad</a></span>
               </label>
-            </div>
-            </form>
+              <small class="privacy-hint">Puedes darte de baja en cualquier momento desde los correos que enviamos.</small>
+             </div>
+
+             <!--botón-->
+            <button type="submit" class="btn-cta">Quiero apuntarme</button>
+          </form>
         </div>
       </div>
     </section>
     <!-- Footer -->
     <section class="footer">
-      <div class="footer-container">
-        <div class="footer-container-left">
-          <a class="enlace-quienes-somos" href="#info-section">QUIÉNES SOMOS</a>
-          <a class="enlace-menu" href="docs/carta-es.pdf" target="_blank" rel="noopener">MENÚ</a>
-          <a class="enlace-eventos" href="#events-section">EVENTOS</a>
-          <a class="enlace-trabaja-con-nosotros" href="#contact-section">EMPLEO</a>
+      <div class="footer-wrap">
+        <div class="footer-col left">
+          <a href="#">QUIÉNES SOMOS</a>
+          <a href="#">MENÚ</a>
+          <a href="#">EVENTOS</a>
+          <a href="#">EMPLEO</a>
         </div>
-        <div class="footer-container-center">
-          <div class="footer-logo">
-            <img src="images/logo-pv.svg" alt="Pura Vida">
-          </div>
-        </div>
-        <div class="footer-container-right">
-          <a class="agenda" href="#events-section">AGENDA</a>
-          <a class="contáctanos" href="#contact-section">CONTÁCTANOS</a>
-          <a class="ubicación" href="#ubication-section">UBICACIÓN</a>
-        </div>
-        <div class="footer-social-media">
-          <a class="footer-ig" href="https://instagram.com/" target="_blank" rel="noopener">IG</a>
-          <a class="footer-wa" href="https://wa.me/34971123456" target="_blank" rel="noopener">TW</a>
-        </div>
-        <div class="footer-meta">
-          <div class="footer-designer">
-            Design made by @Graphic.ron on IG
-          </div>
-          <div class="footer-designer">
-            Photos made by @BarudioStudio on IG
-          </div>
-          <div class="footer-conditions">
-            <a href="#">Terms & Conditions</a> · <a href="#">Privacy Policy</a> 
-          </div>
-        </div>
+
+        <div class="footer-col center">
+          <div class="footer-brand" aria-label="Pura Vida">
+            <!-- Logo inline sin rutas -->
+            <svg viewBox="0 0 240 60" width="180" height="45" aria-hidden="true">
+          <g fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round">
+            <path d="M12 38 L36 30 L48 20 L192 20 L204 30 L228 38 L204 38 L192 46 L48 46 L36 38 Z"/>
+            <rect x="92" y="24" width="56" height="20" rx="10"/>
+            <text x="120" y="39" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#FFFFFF">PURA VIDA</text>
+          </g>
+        </svg>
       </div>
-    </section>
+    </div>
+
+    <!-- Columna derecha -->
+    <nav class="footer-col right">
+      <a href="#">AGENDA</a>
+      <a href="#">CONTÁCTANOS</a>
+      <a href="#">UBICACIÓN</a>
+    </nav>
+
+    <!-- Social -->
+    <div class="footer-social">
+      <a href="#" aria-label="Instagram" class="icon">
+        <!-- IG -->
+        <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+          <g fill="none" stroke="#ffffff" stroke-width="2">
+            <rect x="3" y="3" width="18" height="18" rx="5"/>
+            <circle cx="12" cy="12" r="4.2"/>
+            <circle cx="17.4" cy="6.6" r="1.2" fill="#ffffff"/>
+          </g>
+        </svg>
+      </a>
+      <a href="#" aria-label="WhatsApp" class="icon">
+        <!-- WA -->
+        <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+          <g fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9.5 20.5l-3.8 1.1.9-3.6a8.5 8.5 0 1115.4-4.4 8.5 8.5 0 01-12.5 6.9z"/>
+            <path d="M8.8 9.8c.2-.5.5-.6.9-.6l.5.1c.2.1.4.5.5.8.1.2.1.4 0 .6l-.2.4c-.1.1 0 .3.1.5.3.5.7 1 1.2 1.4.4.3.9.6 1.4.8.2.1.4 0 .5-.1l.5-.7c.1-.1.3-.2.6-.1.3.1.9.4 1.2.6.3.2.3.4.3.6 0 .3-.2.8-.5 1.1-.3.4-.8.6-1.3.6h-.3c-1.1-.1-2.2-.5-3.2-1.1a8.3 8.3 0 01-2.7-2.6c-.6-1-.9-2.1-1-3.2v-.2c0-.5.3-1 .7-1.3z"/>
+          </g>
+        </svg>
+      </a>
+    </div>
+    <div class="footer-meta">
+  <div class="meta-left">
+    <span>Design made by @Graphic.ron</span>
+  </div>
+
+  <div class="meta-center">
+    <nav class="meta-links">
+      <a href="#">Terms &amp; Conditions</a>
+      <a href="#">Privacy Policy</a>
+    </nav>
+  </div>
+
+  <div class="meta-right">
+    <span>Photos made by @BarudioStudio</span>
+  </div>
+</div>
+  </div>
+</section>
   </main>
 </body>
 </html>
